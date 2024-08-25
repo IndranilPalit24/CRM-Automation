@@ -1,7 +1,4 @@
 package com.qa.factory;
-
-
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -21,7 +18,7 @@ public class DriverFactory {
 	 * 
 	 * */
 	public WebDriver initializeDriver(String browser) {
-		System.out.println("Browser is "+browser);
+		System.out.println("                                                                      Browser is "+browser);
 		
 		if(browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();

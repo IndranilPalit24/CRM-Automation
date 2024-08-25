@@ -27,7 +27,11 @@ public class LoginPageSteps {
 	@Then("User is Logged into the Account")
 	public void user_is_logged_into_the_account() throws InterruptedException {
 		loginPage.clickOnLoginButton();
-	  
+	}
+	
+	@Then("User Verifies the company in Homepage")
+	public void company_name_is_abc() {
+		loginPage.verifyHomePageTitle();
 	}
 
 }
