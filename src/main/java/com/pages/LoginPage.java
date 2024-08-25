@@ -3,6 +3,8 @@ package com.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import junit.framework.Assert;
+
 public class LoginPage {
 	
 	private WebDriver driver;
@@ -14,6 +16,7 @@ public class LoginPage {
 	private By Email = By.xpath("//input[@name='email']");
 	private By Password = By.xpath("//input[@name='password']");
 	private By LoginBtn = By.xpath("//div[@class='ui fluid large blue submit button']");
+	private By ABC_Company = By.xpath("//b[text()='ABC Company']");
 	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -39,6 +42,17 @@ public class LoginPage {
 	public void clickOnLoginButton() throws InterruptedException {
 		driver.findElement(LoginBtn).click();
 		Thread.sleep(5000);
+	}
+	
+	@SuppressWarnings("deprecation")
+	public void verifyHomePageTitle() {
+		String CompanyName = driver.findElement(ABC_Company).getText();
+		try {
+			Assert.assertEquals("ABC Company", CompanyName);	
+		}catch(Exception e) {
+			System.out.println("Assert Failed in Company Name");
+			}
+	
 	}
 
 }
