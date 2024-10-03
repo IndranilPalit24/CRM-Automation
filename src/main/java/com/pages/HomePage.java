@@ -4,14 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import junit.framework.Assert;
+
 
 public class HomePage {
 	private WebDriver driver;
+	private String Test;
 	
 	/*By Locators used for the methods
 	 * */
@@ -27,11 +28,13 @@ public class HomePage {
 		String CompanyName = driver.findElement(ABC_Company).getText();
 		try {
 			Assert.assertEquals("ABC Company", CompanyName);	
+			
 		}catch(Exception e) {
 			System.out.println("Assert Failed in Company Name inside verify Home Page Title");
 			}
 	}
 	
+	/*This method returns the Home Page List Count*/
 	public int getHomePageListCount() {
 		List<WebElement> elements = driver.findElements(HomePageList);
 	    return elements.size();

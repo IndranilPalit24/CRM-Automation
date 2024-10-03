@@ -1,13 +1,13 @@
 package com.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver; 
 
-import junit.framework.Assert;
 
 public class LoginPage {
 	
 	private WebDriver driver;
+	private String TestLoginPage;
 	
 	/*
 	 * By Locators
