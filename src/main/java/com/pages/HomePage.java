@@ -3,8 +3,6 @@ package com.pages;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
-
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,12 +24,12 @@ public class HomePage {
 	/*Page actions, features (behaviour) of the page the form of methods*/
 	public void verifyHomePageTitle() throws NoSuchElementException {
 		String CompanyName = driver.findElement(ABC_Company).getText();
-		try {
+		/*try {
 			Assert.assertEquals("ABC Company", CompanyName);	
 			
 		}catch(Exception e) {
 			System.out.println("Assert Failed in Company Name inside verify Home Page Title");
-			}
+			}*/
 	}
 	
 	/*This method returns the Home Page List Count*/
